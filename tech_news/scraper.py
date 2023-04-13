@@ -17,7 +17,7 @@ def fetch(url: str) -> str:
 
 
 # Requisito 2
-def scrape_updates(html_content: str):
+def scrape_updates(html_content: str) -> list[str]:
     selector = Selector(html_content)
     urls_list = []
     for card in selector.css("div.post-outer"):
@@ -26,8 +26,10 @@ def scrape_updates(html_content: str):
 
 
 # Requisito 3
-def scrape_next_page_link(html_content):
-    """Seu código deve vir aqui"""
+def scrape_next_page_link(html_content: str):
+    selector = Selector(html_content)
+    next_button = selector.css("a.next::attr(href)").get()
+    return next_button
 
 
 # Requisito 4
