@@ -1,10 +1,11 @@
 import requests
 from requests.exceptions import Timeout, HTTPError
 import time
+from parsel import Selector
 
 
 # Requisito 1
-def fetch(url: str):
+def fetch(url: str) -> str:
     header = {"user-agent": "Fake user-agent"}
     try:
         time.sleep(1)
@@ -16,8 +17,12 @@ def fetch(url: str):
 
 
 # Requisito 2
-def scrape_updates(html_content):
-    """Seu código deve vir aqui"""
+def scrape_updates(html_content: str):
+    selector = Selector(html_content)
+    urls_list = []
+    for card in selector.css("div.post-outer"):
+        urls_list.append(card.css("a.cs-overlay-link::attr(href)").get())
+    return urls_list if len(urls_list) > 0 else []
 
 
 # Requisito 3
