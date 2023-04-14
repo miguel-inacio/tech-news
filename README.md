@@ -1,13 +1,49 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Projeto Tech News :computer: :newspaper:
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+Projeto desenvolvido no curso de desenvolvimento web da Trybe, no módulo de Ciência da Computação.
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+### Abordagem:
+- Utilizar Python, conhecimentos em programação orientada a objetos e web scraping para construir um programa capaz de buscar notícias do blog da Trybe e gerar opções de busca e leitura.
+
+### Rodando localmente
+
+Clone o repositório
+
+```bash
+  git clone git@github.com:miguel-inacio/tech-news.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd tech-news
+```
+
+Crie e entre em um ambiente virtual
+
+```bash
+    python3 -m venv .venv && source .venv/bin/activate
+```
+
+Instale as dependências
+
+```bash
+ python3 -m pip install -r dev-requirements.txt
+```
+
+<details>
+  <summary> Observações </summary>
+  
+  ### Os seguintes módulos e seus conteúdos foram desenvolvidos por mim:
+Em tech_news:
+- menu.py
+- scraper.py
+
+/analyzer:
+- ratings.py
+- search_engine.py
+
+Em tests:
+/reading_plan:
+- test_reading_plan.py
+</details>
