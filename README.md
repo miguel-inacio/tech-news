@@ -31,6 +31,12 @@ Instale as dependências
  python3 -m pip install -r dev-requirements.txt
 ```
 
+Rode o programa
+
+```bash
+ tech-news-analyzer
+```
+
 <details>
   <summary> Observações </summary>
   
