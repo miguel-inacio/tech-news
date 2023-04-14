@@ -22,5 +22,7 @@ def search_by_date(date: str) -> list[tuple]:
 
 
 # Requisito 9
-def search_by_category(category):
-    """Seu código deve vir aqui"""
+def search_by_category(category: str):
+    query = {"category": {"$regex": category, "$options": "i"}}
+    matching_categories = search_news(query)
+    return [(news["title"], news["url"]) for news in matching_categories]
